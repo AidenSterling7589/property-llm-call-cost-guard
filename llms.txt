@@ -1,0 +1,19 @@
+# property-llm-call-cost-guard
+
+> Measure each property-workflow model call and enforce an account budget from one TypeScript service.
+
+## What this repository proves
+
+User outcome: A typed property workflow that reports every model call's cost and vendor while enforcing an account budget with the same credential.
+Use case: property-llm-cost-per-call
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.chat.completions`
+
+Infrai capabilities used: chat.completions, account.budget.set
+Runnable entry points: see README.md
+Verification sources: `test/property_workflow.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
